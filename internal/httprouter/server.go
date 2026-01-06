@@ -19,7 +19,7 @@ func Start(port string) *Server {
 	router.GET("/hello", func(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(map[string]string{
-			"message": "Hello, World!",
+			"message":   "Hello, World!",
 			"framework": "HttpRouter",
 		})
 	})

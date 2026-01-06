@@ -19,9 +19,9 @@ import (
 )
 
 const (
-	port         = ":8080"
-	numRequests  = 10000
-	warmupReqs   = 100
+	port        = ":8080"
+	numRequests = 10000
+	warmupReqs  = 100
 )
 
 type BenchResult struct {

@@ -18,7 +18,7 @@ func Start(port string) *Server {
 
 	h.GET("/hello", func(c context.Context, ctx *app.RequestContext) {
 		ctx.JSON(consts.StatusOK, map[string]string{
-			"message": "Hello, World!",
+			"message":   "Hello, World!",
 			"framework": "Hertz",
 		})
 	})

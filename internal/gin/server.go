@@ -18,7 +18,7 @@ func Start(port string) *Server {
 
 	r.GET("/hello", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "Hello, World!",
+			"message":   "Hello, World!",
 			"framework": "Gin",
 		})
 	})

@@ -19,7 +19,7 @@ func Start(port string) *Server {
 
 	e.GET("/hello", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, map[string]string{
-			"message": "Hello, World!",
+			"message":   "Hello, World!",
 			"framework": "Echo",
 		})
 	})

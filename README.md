@@ -1,6 +1,7 @@
 # GolangAPIsTest
 
-A performance comparison project for popular Go web frameworks, all implementing the same simple "Hello World" API endpoint.
+A performance comparison project for popular Go web frameworks, all implementing the same simple "Hello World" API
+endpoint.
 
 ## Frameworks Tested
 
@@ -73,6 +74,7 @@ curl http://localhost:8080/hello
 ```
 
 Response:
+
 ```json
 {
   "message": "Hello, World!",
@@ -89,6 +91,7 @@ make bench
 ```
 
 The benchmark will:
+
 1. Start each server sequentially
 2. Perform 100 warmup requests
 3. Execute 1,000 requests to the `/hello` endpoint
@@ -97,6 +100,7 @@ The benchmark will:
 6. Display a summary table
 
 Example output:
+
 ```
 ================================================================================
 BENCHMARK SUMMARY
@@ -116,6 +120,7 @@ FastHTTP        | 198µs        | 123µs        | 0.9ms        | 100.00%
 ## Benchmark Configuration
 
 Edit `benchmark/benchmark_test.go` to adjust:
+
 - `numRequests` - Number of requests per framework (default: 10000)
 - `warmupReqs` - Number of warmup requests (default: 100)
 - `port` - Server port (default: :8080)
@@ -125,9 +130,9 @@ Edit `benchmark/benchmark_test.go` to adjust:
 All frameworks implement the same endpoint:
 
 - **GET** `/hello`
-  - Returns: `{"message": "Hello, World!", "framework": "FrameworkName"}`
-  - Status: 200 OK
-  - Content-Type: application/json
+    - Returns: `{"message": "Hello, World!", "framework": "FrameworkName"}`
+    - Status: 200 OK
+    - Content-Type: application/json
 
 ## Development
 
